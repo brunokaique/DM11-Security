@@ -32,4 +32,5 @@ steps:
     scannerMode: 'MSBuild'
     projectKey: 'TI-GCM-LABS_teste-react-native_AYHvENnYSS9Klg07_kU8'
     projectName: 'teste-react-native'
+    cliProjectKey: 
     - task: SonarQubeAnalyze@5
