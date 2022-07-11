@@ -1,15 +1,3 @@
-# .NET Desktop
-- task: SonarQubePrepare@5
-  inputs:
-    SonarQube: '.netcore'
-    scannerMode: 'MSBuild'
-    projectKey: 'TI-GCM-LABS_teste-react-native_AYHvENnYSS9Klg07_kU8'
-    projectName: 'Teste-dm11'
-# Build and run tests for .NET Desktop or Windows classic desktop solutions.
-# Add steps that publish symbols, save build artifacts, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/apps/windows/dot-net
-- task: SonarQubeAnalyze@5
-
 trigger:
 - main
 
@@ -38,3 +26,10 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+- task: SonarQubePrepare@5
+  inputs:
+    SonarQube: '.netcore'
+    scannerMode: 'MSBuild'
+    projectKey: 'TI-GCM-LABS_teste-react-native_AYHvENnYSS9Klg07_kU8'
+    projectName: 'teste-react-native'
+    - task: SonarQubeAnalyze@5
