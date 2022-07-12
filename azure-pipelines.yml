@@ -5,6 +5,13 @@ trigger:
 pool:
   vmImage: 'windows-latest'
 
+
+variables:
+  solution: '**/*.yml'
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+
+
 steps:
 - task: SonarQubePrepare@5
   inputs:
