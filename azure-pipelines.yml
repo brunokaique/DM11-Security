@@ -26,3 +26,10 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+- task: SonarQubePrepare@5
+  inputs:
+    SonarQube: 'sonarqube_dm11'
+    scannerMode: 'Other'
+- task: SonarQubePublish@5
+  inputs:
+    pollingTimeoutSec: '300'
